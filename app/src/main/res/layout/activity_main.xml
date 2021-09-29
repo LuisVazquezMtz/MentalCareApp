@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_fondo"
+
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/main_bienvenido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:layout_marginTop="10dp"
+        android:text="@string/main_bienvenido"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:textColor="@color/main_azulOscuro"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:id="@+id/main_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/main_bienvenido"
+        android:text="@string/main_titulo"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:textColor="@color/main_azulOscuro"
+        android:textAlignment="center"
+        android:textStyle="normal"
+        />
+
+    <EditText
+        android:id="@+id/main_userbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/main_titulo"
+        android:hint="@string/main_userbox"
+        android:inputType="text"
+        android:textColorHint="@color/main_grisclaro"
+        android:textColor="@color/black"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:textStyle="normal"
+        android:drawableStart="@drawable/ic_usericon"
+        android:drawablePadding="10dp"
+        android:textSize="20dp"
+        android:backgroundTint="@color/main_grisclaro"
+        />
+
+
+    <EditText
+        android:id="@+id/main_passwordbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/main_userbox"
+        android:hint="@string/main_passwordbox"
+        android:inputType="textPassword"
+        android:textColorHint="@color/main_grisclaro"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:textStyle="normal"
+        android:drawableStart="@drawable/ic_passwordicon"
+        android:drawablePadding="10dp"
+        android:textSize="20dp"
+        android:backgroundTint="@color/main_grisclaro"
+        />
+
+    <Button
+        android:id="@+id/main_loginbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/button_style"
+        android:onClick="onClick"
+        android:text="@string/main_logintext"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_passwordbox" />
+
+    <Button
+        android:id="@+id/registerbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClick"
+        android:text="@string/main_registerbutton"
+        android:textAllCaps="false"
+        android:textColor="@color/main_grisclaro"
+        app:layout_constraintTop_toBottomOf="@id/main_loginbutton"
+        tools:layout_editor_absoluteX="80dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

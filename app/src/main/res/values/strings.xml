@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">MentalCareApp</string>
+
+    <!-- Clase main -->
+    <string name="main_bienvenido">BIENVENIDO A</string>
+    <string name="main_titulo">MENTALCARE</string>
+    <string name="main_tituloMin">MentalCare</string>
+    <string name="main_logintext">INICIAR SESION</string>
+    <string name="main_userbox">Usuario</string>
+    <string name="main_passwordbox">Contraseña</string>
+    <string name="main_registerbutton">¿Aun no tienes una cuenta?</string>
+
+    <string name="menu_volver">Volver</string>
+
+
+    <!-- bottom navigation main -->
+    <string name="Navigation_home">Inicio</string>
+    <string name="Navigation_chat">Mensajes</string>
+    <string name="Navigation_calendar">Citas</string>
+    <string name="Navigation_Cuenta">Mi  Cuenta</string>
+
+    <!-- Menu principal -->
+    <string name="Menu_title">MENU PRINCIPAL</string>
+    <string name="Chat_title">MENSAJES</string>
+    <string name="Calendar_title">PROXIMAS CITAS</string>
+    <string name="Perfil_title">TU PERFIL</string>
+
+    <!-- Registro  -->
+    <string name="Register_presentacion">Unete a MentalCare y da el siguiente paso</string>
+    <string name="Register_usuario">Usuario</string>
+    <string name="Register_mail">Correo</string>
+    <string name="Register_Pass">Crear contraseña</string>
+    <string name="Register_ConPass">Confirmar Costraseña</string>
+    <string name="Register_phone">Telefono</string>
+    <string name="Register_seconphone">Telefono Secundario</string>
+    <string name="Opcional">(Opcional)</string>
+    <string name="Register_Next">CONTINUAR REGISTRO</string>
+    <string name="Register_Login">Ya tengo una cuenta</string>
+
+    <!-- Segundo Registro -->
+    <string name="sRegister_titulo">Termina el registro y comienza a usar MentalCare</string>
+    <string name="sRegister_Name">Nombre(s)</string>
+    <string name="sRegister_LastName">Primer Apellido</string>
+    <string name="sRegister_sLastname">Segundo Apellido</string>
+    <string name="sRegisters_age">Edad:</string>
+    <string name="sRegister_sex">Sexo:</string>
+    <string name="sRegister_RegisterButton">CREAR CUENTA</string>
+
+
+</resources>
