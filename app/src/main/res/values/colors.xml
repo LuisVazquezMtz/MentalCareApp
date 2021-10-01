@@ -16,4 +16,6 @@
     <!-- Menu -->
     <color name="main_fondo_menu">#E4E4E4</color>
     <color name="menu_verdeOscuro">#073F32</color>
+    <color name="naranja">#E5880F</color>
+    <color name="naranja_claro">#FFDCAE</color>
 </resources>

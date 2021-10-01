@@ -59,35 +59,18 @@
         app:layout_constraintTop_toBottomOf="@+id/register_titulo"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/register_userbox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/register_bienvenido"
-        android:hint="@string/main_userbox"
-        android:inputType="text"
-        android:textColorHint="@color/main_grisclaro"
-        android:textColor="@color/black"
-        android:layout_marginTop="35dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="70dp"
-        android:textStyle="normal"
-        android:drawableStart="@drawable/ic_usericon"
-        android:drawablePadding="10dp"
-        android:textSize="20dp"
-        android:backgroundTint="@color/main_grisclaro"
-        />
+
 
     <EditText
         android:id="@+id/register_mailbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/register_userbox"
+        app:layout_constraintTop_toBottomOf="@+id/register_bienvenido"
         android:hint="@string/Register_mail"
         android:inputType="text"
         android:textColorHint="@color/main_grisclaro"
         android:textColor="@color/black"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="50dp"
         android:layout_marginStart="70dp"
         android:layout_marginEnd="70dp"
         android:textStyle="normal"

@@ -6,7 +6,7 @@
     <string name="main_titulo">MENTALCARE</string>
     <string name="main_tituloMin">MentalCare</string>
     <string name="main_logintext">INICIAR SESION</string>
-    <string name="main_userbox">Usuario</string>
+    <string name="main_mailbox">Correo Electronico</string>
     <string name="main_passwordbox">Contraseña</string>
     <string name="main_registerbutton">¿Aun no tienes una cuenta?</string>
 
@@ -45,6 +45,8 @@
     <string name="sRegisters_age">Edad:</string>
     <string name="sRegister_sex">Sexo:</string>
     <string name="sRegister_RegisterButton">CREAR CUENTA</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

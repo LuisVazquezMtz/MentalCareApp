@@ -16,7 +16,7 @@
         android:paddingBottom="10dp"
         android:text="@string/Perfil_title"
         android:textAlignment="center"
-        android:textColor="@color/menu_verdeOscuro"
+        android:textColor="@color/main_azulOscuro"
         android:textSize="15sp"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp"
@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView"
-        app:tint="@color/menu_verdeOscuro"
+        app:tint="@color/main_azulOscuro"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

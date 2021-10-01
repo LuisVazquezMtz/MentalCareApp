@@ -4,19 +4,25 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/drawable/button_style.xml" value="0.264" />
+        <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/drawable/circle_background.xml" value="0.12407407407407407" />
+        <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/drawable/elements_backgound.xml" value="0.275" />
         <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/drawable/estilo_boton.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/drawable/homeelements_backgound.xml" value="0.275" />
         <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/drawable/ic_home.xml" value="0.2755208333333333" />
+        <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/drawable/ic_time.xml" value="0.275" />
         <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/drawable/navigationbar_style.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/drawable/tab_item.xml" value="0.2712820512820513" />
         <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/drawable/title_style.xml" value="0.2755208333333333" />
         <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/activity_menu.xml" value="0.264" />
-        <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/activity_register.xml" value="0.4" />
+        <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/activity_second_register.xml" value="0.264" />
-        <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/fragment_calendar.xml" value="0.259375" />
-        <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/fragment_chat.xml" value="0.264" />
+        <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/fragment_calendar.xml" value="0.536" />
+        <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/fragment_chat.xml" value="0.536" />
         <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/fragment_perfil.xml" value="0.259375" />
+        <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/fragment_prox_cita.xml" value="0.2586050724637681" />
+        <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/fragment_proxcita.xml" value="0.6" />
         <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/menu/bottom_navigation.xml" value="0.259375" />
       </map>
     </option>
