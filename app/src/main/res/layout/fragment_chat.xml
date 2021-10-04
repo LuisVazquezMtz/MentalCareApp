@@ -56,7 +56,7 @@
     <!-- CHATBOX -->
 
     <FrameLayout
-        android:id="@+id/citasprogramadasbox"
+        android:id="@+id/mensajebox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
