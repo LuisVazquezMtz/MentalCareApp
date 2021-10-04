@@ -45,8 +45,20 @@
     <string name="sRegisters_age">Edad:</string>
     <string name="sRegister_sex">Sexo:</string>
     <string name="sRegister_RegisterButton">CREAR CUENTA</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- Fragment menu-->
+
+    <string name="home_citastxt">Proxima Cita</string>
+    <string name="home_citastxt2">Citas Programadas</string>
+    <string name="citas">Citas</string>
+    <string name="home_programadastxt">Programadas</string>
+    <string name="recomendacionestxt">Recomendaciones de tu especialista</string>
+
+    <string name="home_recomendaciones">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, at corporis dicta dolore dolorem enim est exercitationem explicabo nam, nihil nulla officia possimus quia repellendus similique sint veritatis? Dicta, quae?</string>
+
+    <!-- Fragment Chat -->
+    <string name="NuevosMensajestxt">Nuevos Mensajes</string>
+    <string name="NombreUsuario">Nombre de usuario</string>
+    <string name="Nuevo_mensaje">Nuevo Mensaje de un paciente o psicologo</string>
 
 </resources>

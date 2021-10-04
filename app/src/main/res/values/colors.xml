@@ -18,4 +18,6 @@
     <color name="menu_verdeOscuro">#073F32</color>
     <color name="naranja">#E5880F</color>
     <color name="naranja_claro">#FFDCAE</color>
+    <color name="verde_oscuro">#53C077</color>
+    <color name="verde_claro">#BAF3CD</color>
 </resources>

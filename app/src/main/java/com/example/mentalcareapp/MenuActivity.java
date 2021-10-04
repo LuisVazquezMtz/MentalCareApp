@@ -16,11 +16,11 @@ public class MenuActivity extends AppCompatActivity {
 
      Button menu_volverbutton;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -38,6 +38,7 @@ public class MenuActivity extends AppCompatActivity {
                     switch (item.getItemId()){
                         case R.id.nav_home:
                             selectedFragment = new HomeFragment();
+
                             break;
                         case R.id.nav_chat:
                             selectedFragment = new ChatFragment();
