@@ -61,4 +61,12 @@
     <string name="NombreUsuario">Nombre de usuario</string>
     <string name="Nuevo_mensaje">Nuevo Mensaje de un paciente o psicologo</string>
 
+    <!-- Fragment Perfil -->
+    <string name="NombreUsuarioPerfil">Nombre de usuario</string>
+    <string name="CorreoUsuarioPerfil">CorreoUsuario@hotmail.com</string>
+    <string name="TelefonoUsuarioPerfil">8113960123</string>
+    <string name="TelefonoCasaUsuarioPerfil">8120197491</string>
+    <string name="CerrarSesionPerfil">Cerrar Sesion</string>
+    <string name="EditarPerfil">Editar</string>
+
 </resources>

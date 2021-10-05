@@ -20,4 +20,9 @@
     <color name="naranja_claro">#FFDCAE</color>
     <color name="verde_oscuro">#53C077</color>
     <color name="verde_claro">#BAF3CD</color>
+
+    <!-- Perfil -->
+    <color name="rojo_cerrarsesion">#F44336</color>
+
+
 </resources>

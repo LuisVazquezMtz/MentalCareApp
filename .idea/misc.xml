@@ -24,11 +24,21 @@
         <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/fragment_prox_cita.xml" value="0.2586050724637681" />
         <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/fragment_proxcita.xml" value="0.6" />
         <entry key="..\:/Users/Luis_/AndroidStudioProjects/MentalCareApp/app/src/main/res/menu/bottom_navigation.xml" value="0.259375" />
+        <entry key="..\:/Users/ultron/AndroidStudioProjects/MentalCareApp/app/src/main/res/drawable/background_itemsmenu.xml" value="0.3828125" />
+        <entry key="..\:/Users/ultron/AndroidStudioProjects/MentalCareApp/app/src/main/res/drawable/circle_background.xml" value="0.3828125" />
+        <entry key="..\:/Users/ultron/AndroidStudioProjects/MentalCareApp/app/src/main/res/drawable/circlewhite_background.xml" value="0.3828125" />
         <entry key="..\:/Users/ultron/AndroidStudioProjects/MentalCareApp/app/src/main/res/drawable/ic_home.xml" value="0.3828125" />
+        <entry key="..\:/Users/ultron/AndroidStudioProjects/MentalCareApp/app/src/main/res/drawable/ic_usericon.xml" value="0.3828125" />
+        <entry key="..\:/Users/ultron/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/ultron/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/activity_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/ultron/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/activity_register.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/ultron/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/activity_second_register.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/ultron/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/fragment_calendar.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/ultron/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/fragment_chat.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/ultron/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/ultron/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/ultron/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/fragment_perfil.xml" value="0.25" />
+        <entry key="..\:/Users/ultron/AndroidStudioProjects/MentalCareApp/app/src/main/res/layout/fragment_proxcita.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/ultron/AndroidStudioProjects/MentalCareApp/app/src/main/res/menu/bottom_navigation.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
