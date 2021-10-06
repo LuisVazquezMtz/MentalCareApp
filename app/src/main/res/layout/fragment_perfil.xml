@@ -40,21 +40,18 @@
         android:id="@+id/cajaperfil"
         android:layout_width="350dp"
         android:layout_height="415dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="30dp"
         android:background="@drawable/background_itemsmenu"
         android:justificationMode="inter_word"
         android:padding="20dp"
         android:paddingBottom="10dp"
 
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf=""
-        app:layout_constraintTop_toBottomOf="@+id/textView"
         android:textAlignment="center"
-        tools:ignore="MissingConstraints" >
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints">
 
 
         <FrameLayout
@@ -86,14 +83,14 @@
 
                 android:layout_width="match_parent"
 
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
                 android:layout_marginStart="32dp"
 
                 android:layout_marginTop="80dp"
                 android:layout_marginEnd="32dp"
                 android:drawableStart="@drawable/ic_mail"
                 android:drawableTint="@color/black"
-                android:gravity="center"
+                android:drawablePadding="10dp"
                 android:text="@string/CorreoUsuarioPerfil"
                 android:textColor="@color/black"
                 android:textSize="15sp"
@@ -167,11 +164,11 @@
                 android:layout_gravity="right"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="350dp"
-                android:textAllCaps="false"
                 android:background="@android:color/transparent"
                 android:minHeight="48dp"
                 android:onClick="onClick"
                 android:text="@string/EditarPerfil"
+                android:textAllCaps="false"
                 android:textColor="@color/main_grisclaro"
                 tools:ignore="TouchTargetSizeCheck" />
 
@@ -184,14 +181,12 @@
         android:layout_width="118dp"
         android:layout_height="113dp"
         android:layout_gravity="center_vertical"
-
         android:background="@drawable/circlewhite_background"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="132dp">
-
-
-
+        android:layout_marginBottom="360dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cajaperfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
 
 
         <ImageView
@@ -202,8 +197,6 @@
             android:layout_marginStart="5dp"
             app:srcCompat="@drawable/ic_usericon"
             app:tint="@color/main_grisclaro" />
-
-
 
 
     </LinearLayout>
