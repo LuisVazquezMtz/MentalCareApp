@@ -32,7 +32,7 @@
     <string name="Register_Pass">Crear contraseña</string>
     <string name="Register_ConPass">Confirmar Costraseña</string>
     <string name="Register_phone">Telefono</string>
-    <string name="Register_seconphone">Telefono Secundario</string>
+    <string name="Register_seconphone">Tel secundario Opcional</string>
     <string name="Opcional">(Opcional)</string>
     <string name="Register_Next">CONTINUAR REGISTRO</string>
     <string name="Register_Login">Ya tengo una cuenta</string>

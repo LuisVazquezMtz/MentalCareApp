@@ -19,10 +19,10 @@ public class sexselector {
         sexselector Masculino = new sexselector(0,"Masculino");
         SexArrayList.add(Masculino);
 
-        sexselector Femenino = new sexselector(0,"Femenino");
+        sexselector Femenino = new sexselector(1,"Femenino");
         SexArrayList.add(Femenino);
 
-        sexselector Otro = new sexselector(0,"Otro");
+        sexselector Otro = new sexselector(2,"Otro");
         SexArrayList.add(Otro);
     }
 
@@ -54,5 +54,10 @@ public class sexselector {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

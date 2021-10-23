@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
 
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="40dp"
@@ -59,152 +60,275 @@
         app:layout_constraintTop_toBottomOf="@+id/register_titulo"
         tools:ignore="MissingConstraints" />
 
+    <ScrollView
 
-
-    <EditText
-        android:id="@+id/register_mailbox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/register_bienvenido"
-        android:hint="@string/Register_mail"
-        android:inputType="text"
-        android:textColorHint="@color/main_grisclaro"
-        android:textColor="@color/black"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="70dp"
-        android:textStyle="normal"
-        android:drawableStart="@drawable/ic_mail"
-        android:drawableTint="@color/main_grisclaro"
-        android:drawablePadding="10dp"
-        android:textSize="20dp"
-        android:backgroundTint="@color/main_grisclaro"
-        />
 
-    <EditText
-        android:id="@+id/register_passwordlbox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/register_mailbox"
-        android:hint="@string/Register_Pass"
-        android:inputType="text"
-        android:textColorHint="@color/main_grisclaro"
-        android:textColor="@color/black"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="70dp"
-        android:textStyle="normal"
-        android:drawableStart="@drawable/ic_passwordicon"
-        android:drawableTint="@color/main_grisclaro"
-        android:drawablePadding="10dp"
-        android:textSize="20dp"
-        android:backgroundTint="@color/main_grisclaro"
-        />
+        android:fillViewport="true"
 
-    <EditText
-        android:id="@+id/register_confirmpasswordlbox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/register_passwordlbox"
-        android:hint="@string/Register_ConPass"
-        android:inputType="text"
-        android:textColorHint="@color/main_grisclaro"
-        android:textColor="@color/black"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="70dp"
-        android:textStyle="normal"
-        android:drawableStart="@drawable/ic_passwordicon"
-        android:drawableTint="@color/main_grisclaro"
-        android:drawablePadding="10dp"
-        android:textSize="20dp"
-        android:backgroundTint="@color/main_grisclaro"
-        />
-
-    <EditText
-        android:id="@+id/register_phonebox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/register_confirmpasswordlbox"
-        android:hint="@string/Register_phone"
-        android:inputType="text"
-        android:textColorHint="@color/main_grisclaro"
-        android:textColor="@color/black"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="70dp"
-        android:textStyle="normal"
-        android:drawableStart="@drawable/ic_phone"
-        android:drawableTint="@color/main_grisclaro"
-        android:drawablePadding="10dp"
-        android:textSize="20dp"
-        android:backgroundTint="@color/main_grisclaro"
-        />
-
-    <EditText
-        android:id="@+id/register_secondphonebox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/register_phonebox"
-        android:hint="@string/Register_seconphone"
-        android:inputType="text"
-        android:textColorHint="@color/main_grisclaro"
-        android:textColor="@color/black"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="90dp"
-        android:textStyle="normal"
-        android:drawableStart="@drawable/ic_phone"
-        android:drawableTint="@color/main_grisclaro"
-        android:drawablePadding="10dp"
-        android:textSize="20dp"
-        android:backgroundTint="@color/main_grisclaro"
-        />
-
-    <TextView
-        android:id="@+id/opcionaltext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:gravity="center"
-        android:text="@string/Opcional"
-        android:textAlignment="center"
-        android:textColor="@color/main_grisclaro"
-        android:textSize="15dp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/register_secondphonebox"
-        app:layout_constraintStart_toEndOf="@+id/register_secondphonebox"
-        app:layout_constraintTop_toBottomOf="@+id/register_phonebox"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/register_nextbutton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="100dp"
-        android:background="@drawable/button_style"
-        android:onClick="onClick"
-        android:text="@string/Register_Next"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_secondphonebox" />
-
-    <Button
-        android:id="@+id/register_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="13dp"
-        android:background="@android:color/transparent"
-        android:paddingRight="30dp"
-        android:onClick="onClick"
-        android:text="@string/Register_Login"
-        android:textAlignment="textEnd"
-        android:textAllCaps="false"
-        android:textColor="@color/main_grisclaro"
+        android:scrollbarThumbVertical="@drawable/button_style"
+        android:scrollbarSize="6dp"
+        android:fadeScrollbars="false"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/register_bienvenido"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/register_bienvenido">
+
+            <EditText
+                android:id="@+id/register_mailbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+
+                android:layout_marginEnd="70dp"
+                android:backgroundTint="@color/main_grisclaro"
+                android:drawableStart="@drawable/ic_mail"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/main_grisclaro"
+                android:hint="@string/Register_mail"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/main_grisclaro"
+                android:textSize="20dp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/register_passwordlbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="70dp"
+                android:backgroundTint="@color/main_grisclaro"
+                android:drawableStart="@drawable/ic_passwordicon"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/main_grisclaro"
+                android:hint="@string/Register_Pass"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/main_grisclaro"
+                android:textSize="20dp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toBottomOf="@+id/register_mailbox" />
+
+            <EditText
+                android:id="@+id/register_confirmpasswordlbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="70dp"
+                android:backgroundTint="@color/main_grisclaro"
+                android:drawableStart="@drawable/ic_passwordicon"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/main_grisclaro"
+                android:hint="@string/Register_ConPass"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/main_grisclaro"
+                android:textSize="20dp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toBottomOf="@+id/register_passwordlbox" />
+
+            <EditText
+                android:id="@+id/register_phonebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="70dp"
+                android:backgroundTint="@color/main_grisclaro"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/main_grisclaro"
+                android:hint="@string/Register_phone"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/main_grisclaro"
+                android:textSize="20dp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toBottomOf="@+id/register_confirmpasswordlbox" />
+
+            <EditText
+                android:id="@+id/register_secondphonebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="68dp"
+                android:backgroundTint="@color/main_grisclaro"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/main_grisclaro"
+                android:hint="@string/Register_seconphone"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/main_grisclaro"
+                android:textSize="20dp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toBottomOf="@+id/register_phonebox" />
+
+            <EditText
+                android:id="@+id/sRegister_namebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="70dp"
+                android:backgroundTint="@color/main_grisclaro"
+                android:hint="@string/sRegister_Name"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/main_grisclaro"
+                android:textSize="20dp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toBottomOf="@+id/register_secondphonebox" />
+
+            <EditText
+                android:id="@+id/sRegister_lastnamebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="70dp"
+                android:backgroundTint="@color/main_grisclaro"
+                android:hint="@string/sRegister_LastName"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/main_grisclaro"
+                android:textSize="20dp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toBottomOf="@+id/sRegister_namebox" />
+
+            <EditText
+                android:id="@+id/sRegister_slastnamebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="70dp"
+                android:backgroundTint="@color/main_grisclaro"
+                android:hint="@string/sRegister_sLastname"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/main_grisclaro"
+                android:textSize="20dp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toBottomOf="@+id/sRegister_lastnamebox" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/sRegister_agetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/sRegisters_age"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/main_grisclaro"
+                    android:textSize="20dp"
+
+                    android:textStyle="normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sRegister_slastnamebox"
+
+                    />
+
+                <TextView
+                    android:id="@+id/sRegister_sextext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="@string/sRegister_sex"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/main_grisclaro"
+                    android:textSize="20dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <NumberPicker
+                    android:id="@+id/sRegister_AgeBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="130dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/black"
+                    android:theme="@style/AppTheme.Picker"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sRegister_agetext" />
+
+                <NumberPicker
+                    android:id="@+id/sRegister_sexBox"
+                    android:layout_width="90dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="100dp"
+                    android:backgroundTint="@color/black"
+                    android:theme="@style/AppTheme.Picker"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sRegister_agetext" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/sRegister_registerbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="100dp"
+                android:background="@drawable/button_style"
+                android:onClick="onClick"
+                android:text="@string/sRegister_RegisterButton"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sRegister_AgeBox" />
+
+
+            <Button
+                android:id="@+id/register_login"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="13dp"
+                android:background="@android:color/transparent"
+                android:onClick="onClick"
+                android:paddingRight="30dp"
+                android:text="@string/Register_Login"
+                android:textAlignment="textEnd"
+                android:textAllCaps="false"
+                android:textColor="@color/main_grisclaro"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
