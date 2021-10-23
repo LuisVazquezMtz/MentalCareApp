@@ -29,6 +29,7 @@
     <string name="Register_presentacion">Unete a MentalCare y da el siguiente paso</string>
     <string name="Register_usuario">Usuario</string>
     <string name="Register_mail">Correo</string>
+    <string name="Register_tipoUsuario">Cuenta tipo Especialista </string>
     <string name="Register_Pass">Crear contraseña</string>
     <string name="Register_ConPass">Confirmar Costraseña</string>
     <string name="Register_phone">Telefono</string>
@@ -36,8 +37,7 @@
     <string name="Opcional">(Opcional)</string>
     <string name="Register_Next">CONTINUAR REGISTRO</string>
     <string name="Register_Login">Ya tengo una cuenta</string>
-
-    <!-- Segundo Registro -->
+    <string name="Register_txtespecialista">Informacion sobre especialistas</string>
     <string name="sRegister_titulo">Termina el registro y comienza a usar MentalCare</string>
     <string name="sRegister_Name">Nombre(s)</string>
     <string name="sRegister_LastName">Primer Apellido</string>
@@ -45,6 +45,14 @@
     <string name="sRegisters_age">Edad:</string>
     <string name="sRegister_sex">Sexo:</string>
     <string name="sRegister_RegisterButton">CREAR CUENTA</string>
+
+    <!--Formulario para especialistas   -->
+
+    <string name="Register_especializacion">Especialización</string>
+    <string name="Register_trabajo">Lugar de trabajo</string>
+    <string name="Register_direccion">Dirección</string>
+    <string name="Register_estudios">Estudios</string>
+
 
     <!-- Fragment menu-->
 

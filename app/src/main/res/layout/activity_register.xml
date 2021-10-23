@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:paddingTop="8dp"
         android:text="@string/main_tituloMin"
         android:textColor="@color/main_azulOscuro"
@@ -42,12 +42,28 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+
+    <Switch
+        android:id="@+id/switchUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="onClick"
+        android:text="@string/Register_tipoUsuario"
+        android:textColor="@color/main_grisclaro"
+        android:trackTint="@color/main_fondo_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/register_bienvenido"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="32dp"
         android:gravity="center"
         android:text="@string/Register_presentacion"
@@ -183,6 +199,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="70dp"
                 android:backgroundTint="@color/main_grisclaro"
+                android:drawableStart="@drawable/ic_usericon"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/main_grisclaro"
                 android:hint="@string/sRegister_Name"
                 android:inputType="text"
                 android:textColor="@color/black"
@@ -199,6 +218,9 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="70dp"
                 android:backgroundTint="@color/main_grisclaro"
+                android:drawableStart="@drawable/ic_usericon"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/main_grisclaro"
                 android:hint="@string/sRegister_LastName"
                 android:inputType="text"
                 android:textColor="@color/black"
@@ -215,6 +237,9 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="70dp"
                 android:backgroundTint="@color/main_grisclaro"
+                android:drawableStart="@drawable/ic_usericon"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/main_grisclaro"
                 android:hint="@string/sRegister_sLastname"
                 android:inputType="text"
                 android:textColor="@color/black"
@@ -291,7 +316,108 @@
 
             </LinearLayout>
 
+            <!-- OPCIONES PARA ESPECIALISTAS -->
 
+            <LinearLayout
+                android:id="@+id/info_especialista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/Register_txtespecialista"
+                android:textAlignment="center"
+
+                android:textColor="@color/main_azulOscuro"
+                android:textSize="18dp"
+                android:textStyle="normal"
+                tools:ignore="MissingConstraints" />
+
+
+                <EditText
+                    android:id="@+id/Register_especializacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="50dp"
+                    android:backgroundTint="@color/main_grisclaro"
+                    android:drawableStart="@drawable/ic_especial"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/main_grisclaro"
+                    android:hint="@string/Register_especializacion"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/main_grisclaro"
+                    android:textSize="20dp"
+                    android:textStyle="normal"
+                    app:layout_constraintTop_toBottomOf="@+id/sRegister_lastnamebox"/>
+
+                <EditText
+                    android:id="@+id/Register_trabajo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="50dp"
+                    android:backgroundTint="@color/main_grisclaro"
+                    android:drawableStart="@drawable/ic_agregar"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/main_grisclaro"
+                    android:hint="@string/Register_trabajo"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/main_grisclaro"
+                    android:textSize="20dp"
+                    android:textStyle="normal"
+                    app:layout_constraintTop_toBottomOf="@+id/sRegister_lastnamebox"/>
+
+                <EditText
+                    android:id="@+id/Register_direccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="50dp"
+                    android:backgroundTint="@color/main_grisclaro"
+                    android:drawableStart="@drawable/ic_location"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/main_grisclaro"
+                    android:hint="@string/Register_direccion"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/main_grisclaro"
+                    android:textSize="20dp"
+                    android:textStyle="normal"
+                    app:layout_constraintTop_toBottomOf="@+id/sRegister_lastnamebox"/>
+
+                <EditText
+                    android:id="@+id/Register_estudios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="50dp"
+                    android:backgroundTint="@color/main_grisclaro"
+                    android:drawableStart="@drawable/ic_estudios"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/main_grisclaro"
+                    android:hint="@string/Register_estudios"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/main_grisclaro"
+                    android:textSize="20dp"
+                    android:textStyle="normal"
+                    app:layout_constraintTop_toBottomOf="@+id/sRegister_lastnamebox"/>
+
+            </LinearLayout>
+
+        <!--  //////////////////////////////////////////////////////////// -->
             <Button
                 android:id="@+id/sRegister_registerbutton"
                 android:layout_width="match_parent"
@@ -315,16 +441,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="13dp"
+                android:layout_marginBottom="30dp"
                 android:background="@android:color/transparent"
                 android:onClick="onClick"
-                android:paddingRight="30dp"
+
                 android:text="@string/Register_Login"
-                android:textAlignment="textEnd"
+                android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="@color/main_grisclaro"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                 />
 
 
         </LinearLayout>

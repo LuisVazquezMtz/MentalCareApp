@@ -18,9 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-        //Metodo para navehar recomendado
 
-    // XDDDDD
+
+
 
     //botones
     public void onClick(View v){

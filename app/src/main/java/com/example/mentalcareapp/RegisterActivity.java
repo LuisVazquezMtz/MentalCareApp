@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.NumberPicker;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -53,7 +55,10 @@ public class RegisterActivity extends AppCompatActivity {
     private String Age = "";
     private String Sex = "";
 
-    private int Select;
+    private int typeUser;  // Cliente = 0, Especialisata = 1 //
+
+    private Switch switchTypeUser;
+    private LinearLayout infoEspecialista;
 
     FirebaseAuth Auth;
     DatabaseReference Database;
@@ -71,6 +76,7 @@ public class RegisterActivity extends AppCompatActivity {
         EditTextSecondPhone = (EditText) findViewById(R.id.register_secondphonebox);
         ButtonNext = (Button) findViewById(R.id.sRegister_registerbutton);
 
+            //Funciones Firebase
         Auth = FirebaseAuth.getInstance();
         Database = FirebaseDatabase.getInstance().getReference();
 
@@ -94,11 +100,30 @@ public class RegisterActivity extends AppCompatActivity {
         EditTextSecondLastName = (EditText) findViewById(R.id.sRegister_slastnamebox);
         numberPicker =  findViewById(R.id.sRegister_AgeBox);
         sexPicker = findViewById(R.id.sRegister_sexBox);
+
+        switchTypeUser = (Switch) findViewById(R.id.switchUser);
+        infoEspecialista = (LinearLayout) findViewById(R.id.info_especialista);
     }
 
 
     public void onClick(View v){
         switch (v.getId()){
+            // Tipo de usuario ///
+            case R.id.switchUser:
+                System.out.println("AAAAAAAAAAAA");
+
+                    if (switchTypeUser.isChecked()) {
+                        typeUser = 1;
+                        infoEspecialista.setVisibility(LinearLayout.VISIBLE);
+                        System.out.println("ENTRA");
+
+                    } else {
+                        typeUser = 0;
+                        infoEspecialista.setVisibility(LinearLayout.GONE);
+                        System.out.println("SALE");
+                    }
+                break;
+
             case R.id.sRegister_registerbutton:
 
                 Mail = EditTextMail.getText().toString();
@@ -135,11 +160,12 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "Faltan datos por llenar", Toast.LENGTH_SHORT).show();
                 }
 
-            /*    */
-
                 break;
-                //Boton, voler a login
+
+
+                //Boton, volver a login//
             case R.id.register_login:
+
                 Intent intent2 = new Intent(RegisterActivity.this, MainActivity.class);
                 startActivity(intent2);
                 finish();
