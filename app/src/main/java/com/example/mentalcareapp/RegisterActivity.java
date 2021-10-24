@@ -202,6 +202,7 @@ public class RegisterActivity extends AppCompatActivity {
                             if(task2.isSuccessful()){ }
                             else{
                                 Toast.makeText(RegisterActivity.this, "No se crearon los datos correctamente", Toast.LENGTH_SHORT).show();
+
                             }
                         }
                     });
