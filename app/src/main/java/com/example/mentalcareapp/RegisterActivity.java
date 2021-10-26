@@ -40,6 +40,12 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText EditTextLastName;
     private EditText EditTextSecondLastName;
 
+    private EditText EditTextEspecializacion;
+    private EditText EditTextLugar;
+    private EditText EditTextDireccion;
+    private EditText EditTextEstudios;
+
+
 
     // VARIABLES QUE GUARDAN EL TEXTO INGRESADO //
 
@@ -54,6 +60,12 @@ public class RegisterActivity extends AppCompatActivity {
     private String SecondLastName = "";
     private String Age = "";
     private String Sex = "";
+
+    private String Especializacion ="";
+    private String Lugar = "";
+    private String Direccion= "";
+    private String Estudios = "";
+
 
     private int typeUser;  // Cliente = 0, Especialisata = 1 //
 
@@ -103,6 +115,13 @@ public class RegisterActivity extends AppCompatActivity {
 
         switchTypeUser = (Switch) findViewById(R.id.switchUser);
         infoEspecialista = (LinearLayout) findViewById(R.id.info_especialista);
+
+        //Informacion para especializtas
+
+        EditTextEspecializacion = (EditText) findViewById(R.id.Register_especializacion);
+        EditTextLugar = (EditText) findViewById(R.id.Register_trabajo);
+        EditTextDireccion = (EditText) findViewById(R.id.Register_direccion);
+        EditTextEstudios = (EditText) findViewById(R.id.Register_estudios);
     }
 
 
@@ -110,7 +129,6 @@ public class RegisterActivity extends AppCompatActivity {
         switch (v.getId()){
             // Tipo de usuario ///
             case R.id.switchUser:
-                System.out.println("AAAAAAAAAAAA");
 
                     if (switchTypeUser.isChecked()) {
                         typeUser = 1;
@@ -136,32 +154,61 @@ public class RegisterActivity extends AppCompatActivity {
                 LastName = EditTextLastName.getText().toString();
                 SecondLastName = EditTextSecondLastName.getText().toString();
                 Age = String.valueOf(numberPicker.getValue());
-
                 Sex = String.valueOf(sexselector.getSexArrayList().get(sexPicker.getValue()));
 
+                Especializacion = EditTextEspecializacion.getText().toString();
+                Direccion = EditTextDireccion.getText().toString();
+                Lugar = EditTextLugar.getText().toString();
+                Estudios = EditTextEstudios.getText().toString();
 
-                if (!Mail.isEmpty() && !Password.isEmpty() && !ConPassword.isEmpty() && !Phone.isEmpty() && !Names.isEmpty() && !LastName.isEmpty() &&
-                        !SecondLastName.isEmpty() && !Age.isEmpty() && !Sex.isEmpty()){
+                // Registro y condiciones para pacientes
+                if (typeUser == 0){
+                    if (!Mail.isEmpty() && !Password.isEmpty() && !ConPassword.isEmpty() && !Phone.isEmpty() && !Names.isEmpty() && !LastName.isEmpty() &&
+                            !SecondLastName.isEmpty() && !Age.isEmpty() && !Sex.isEmpty()){
 
-                    if(Password.length() >= 6){
+                        if(Password.length() >= 6){
 
-                        if (Password.equals(ConPassword)){
-                            registerUser();
+                            if (Password.equals(ConPassword)){
+                                registerUserPaciente();
+                            }
+                            else {
+                                Toast.makeText(RegisterActivity.this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+                            }
                         }
                         else {
-                            Toast.makeText(RegisterActivity.this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(RegisterActivity.this, "La contraseña nececita al menos 6 caracteres", Toast.LENGTH_SHORT).show();
                         }
                     }
-                    else {
-                        Toast.makeText(RegisterActivity.this, "La contraseña nececita al menos 6 caracteres", Toast.LENGTH_SHORT).show();
+                    else{
+                        Toast.makeText(RegisterActivity.this, "Faltan datos por llenar", Toast.LENGTH_SHORT).show();
                     }
                 }
-                else{
-                    Toast.makeText(RegisterActivity.this, "Faltan datos por llenar", Toast.LENGTH_SHORT).show();
+
+                // Registro y condiciones para especialistas
+                if (typeUser == 1){
+                    if (!Mail.isEmpty() && !Password.isEmpty() && !ConPassword.isEmpty() && !Phone.isEmpty() && !Names.isEmpty() && !LastName.isEmpty() &&
+                            !SecondLastName.isEmpty() && !Age.isEmpty() && !Sex.isEmpty() && !Especializacion.isEmpty() && !Direccion.isEmpty() &&
+                            !Lugar.isEmpty() && !Estudios.isEmpty()){
+
+                        if(Password.length() >= 6){
+
+                            if (Password.equals(ConPassword)){
+                                registerUserEspecial();
+                            }
+                            else {
+                                Toast.makeText(RegisterActivity.this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                        else {
+                            Toast.makeText(RegisterActivity.this, "La contraseña nececita al menos 6 caracteres", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    else{
+                        Toast.makeText(RegisterActivity.this, "Faltan datos por llenar", Toast.LENGTH_SHORT).show();
+                    }
                 }
 
                 break;
-
 
                 //Boton, volver a login//
             case R.id.register_login:
@@ -174,7 +221,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     //  CARGAR REGISTRO  //
-    public void registerUser(){
+    public void registerUserPaciente(){
         Auth.createUserWithEmailAndPassword(Mail,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -194,20 +241,19 @@ public class RegisterActivity extends AppCompatActivity {
                     map2.put("Sex", Sex);
 
                     String id = Auth.getCurrentUser().getUid();
-                        idUsertemp = id;
+                    idUsertemp = id;
 
-                    Database.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    Database.child("Users").child("Pacientes").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task2) {
                             if(task2.isSuccessful()){ }
                             else{
                                 Toast.makeText(RegisterActivity.this, "No se crearon los datos correctamente", Toast.LENGTH_SHORT).show();
-
                             }
                         }
                     });
 
-                    Database.child("Users").child(id).child("info").setValue(map2).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    Database.child("Users").child("Pacientes").child(id).child("Personal Info").setValue(map2).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task2) {
                             if(task2.isSuccessful()){
@@ -217,6 +263,81 @@ public class RegisterActivity extends AppCompatActivity {
                                 finish();
 
                                 Toast.makeText(RegisterActivity.this, "Se creo la cuenta con exito", Toast.LENGTH_SHORT).show();
+                            }
+                            else{
+                                Toast.makeText(RegisterActivity.this, "No se crearon los datos correctamente", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                }
+                else{
+                    Toast.makeText(RegisterActivity.this, "Error al registrar usuario", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
+
+    }
+
+    public void registerUserEspecial(){
+        Auth.createUserWithEmailAndPassword(Mail,Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+
+                    Map<String, Object> map = new HashMap<>();
+                    map.put( "mail", Mail);
+                    map.put( "password", Password);
+                    map.put( "phone", Phone);
+                    map.put( "secondPhone", SecondPhone);
+
+                    Map<String, Object> map2 = new HashMap<>();
+                    map2.put("names", Names);
+                    map2.put("lastname", LastName);
+                    map2.put("secondLastName", SecondLastName);
+                    map2.put("Age", Age);
+                    map2.put("Sex", Sex);
+
+                    Map<String, Object> map3 = new HashMap<>();
+                    map3.put("Specialization", Especializacion);
+                    map3.put("Workplace", Lugar);
+                    map3.put("Address", Direccion);
+                    map3.put("Studies", Estudios);
+
+
+                    String id = Auth.getCurrentUser().getUid();
+                    idUsertemp = id;
+
+                    Database.child("Users").child("Especial").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task2) {
+                            if(task2.isSuccessful()){ }
+                            else{
+                                Toast.makeText(RegisterActivity.this, "No se crearon los datos correctamente", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+
+                    Database.child("Users").child("Especial").child(id).child("Personal Info").setValue(map2).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task2) {
+                            if(task2.isSuccessful()){ }
+                            else{
+                                Toast.makeText(RegisterActivity.this, "No se crearon los datos correctamente", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+
+                    Database.child("Users").child("Especial").child(id).child("Professional Info").setValue(map3).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task2) {
+                            if(task2.isSuccessful()){
+
+                                Intent intent = new Intent( RegisterActivity.this, MenuActivity.class);
+                                startActivity(intent);
+                                finish();
+
+                                Toast.makeText(RegisterActivity.this, "Se creo la cuenta Especialista con exito", Toast.LENGTH_SHORT).show();
                             }
                             else{
                                 Toast.makeText(RegisterActivity.this, "No se crearon los datos correctamente", Toast.LENGTH_SHORT).show();
@@ -235,7 +356,5 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
     }
-
-
 
 }
