@@ -39,11 +39,12 @@
     <FrameLayout
         android:id="@+id/cajaperfil"
         android:layout_width="350dp"
-        android:layout_height="415dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/background_itemsmenu"
         android:justificationMode="inter_word"
         android:padding="20dp"
         android:paddingBottom="10dp"
+        android:layout_marginTop="40dp"
 
 
         android:textAlignment="center"
@@ -56,7 +57,7 @@
 
         <FrameLayout
             android:layout_width="308dp"
-            android:layout_height="372dp">
+            android:layout_height="wrap_content">
 
 
             <TextView
@@ -67,10 +68,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
 
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="32dp"
                 android:gravity="center"
-                android:text="@string/NombreUsuarioPerfil"
+                android:text="UserName"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -82,15 +83,16 @@
                 android:id="@+id/CorreoUsuarioPerfil"
 
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-                android:layout_height="25dp"
-                android:layout_marginStart="32dp"
-
+                android:layout_marginStart="20dp"
+                android:textAlignment="textStart"
                 android:layout_marginTop="80dp"
-                android:layout_marginEnd="32dp"
+                android:layout_marginEnd="20dp"
                 android:drawableStart="@drawable/ic_mail"
-                android:drawableTint="@color/black"
                 android:drawablePadding="10dp"
+
+                android:drawableTint="@color/black"
                 android:text="@string/CorreoUsuarioPerfil"
                 android:textColor="@color/black"
                 android:textSize="15sp"
@@ -102,88 +104,171 @@
                 android:id="@+id/TelefonoUsuarioPerfil"
 
                 android:layout_width="match_parent"
-
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-
-                android:layout_marginTop="120dp"
-                android:layout_marginEnd="32dp"
-
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="115dp"
+                android:layout_marginEnd="20dp"
                 android:drawableStart="@drawable/ic_phone"
-                android:drawablePadding="16dp"
+
                 android:drawableTint="@color/black"
-                android:text="@string/TelefonoUsuarioPerfil"
+                android:text="0000000000"
                 android:textAlignment="textStart"
+                android:drawablePadding="10dp"
                 android:textColor="@color/black"
                 android:textSize="15sp"
 
 
                 />
+
+            <!--      INFO PROFESIONAL     -->
 
             <TextView
                 android:id="@+id/TelefonoCasaUsuarioPerfil"
-
                 android:layout_width="match_parent"
-
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-
-                android:layout_marginTop="160dp"
-                android:layout_marginEnd="32dp"
-
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginEnd="20dp"
                 android:drawableStart="@drawable/ic_phone"
-                android:drawablePadding="16dp"
+
+                android:drawablePadding="10dp"
                 android:drawableTint="@color/black"
-                android:text="@string/TelefonoCasaUsuarioPerfil"
+                android:text="0000000000"
                 android:textAlignment="textStart"
                 android:textColor="@color/black"
-                android:textSize="15sp"
+                android:textSize="15sp" />
 
-
-                />
-
-            <Button
-                android:id="@+id/Cerrar_sesion"
+            <LinearLayout
+                android:id="@+id/info_profesional"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="330dp"
-                android:layout_marginEnd="100dp"
-                android:background="@android:color/transparent"
-                android:minHeight="48dp"
-                android:onClick="onClick"
-                android:text="@string/CerrarSesionPerfil"
-                android:textAllCaps="false"
-                android:textColor="#F44336"
-                tools:ignore="TouchTargetSizeCheck" />
+                android:orientation="vertical"
+                android:paddingBottom="80dp"
+                android:visibility="gone"
+                >
 
-            <Button
-                android:id="@+id/Editar_perfil"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="350dp"
-                android:background="@android:color/transparent"
-                android:minHeight="48dp"
-                android:onClick="onClick"
-                android:text="@string/EditarPerfil"
-                android:textAllCaps="false"
-                android:textColor="@color/main_grisclaro"
-                tools:ignore="TouchTargetSizeCheck" />
+                <TextView
+                    android:id="@+id/text_especializacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="@string/textEspecializacion"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/main_grisclaro"
+                    android:textSize="13sp" />
 
+                <TextView
+                    android:id="@+id/EspecializacionPerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="50dp"
+                    android:drawableStart="@drawable/ic_especial"
+                    android:textAlignment="textStart"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/black"
+                    android:text="0000000000"
+
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/text_workplace"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="@string/textLugartrabajo"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/main_grisclaro"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/WorkplacePerfi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="50dp"
+                    android:drawableStart="@drawable/ic_agregar"
+                    android:textAlignment="textStart"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/black"
+                    android:text="0000000000"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/text_Ubicacion"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="@string/textUbicacion"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/main_grisclaro"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/UbicacionPerfi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="50dp"
+                    android:drawableStart="@drawable/ic_location"
+                    android:textAlignment="textStart"
+                    android:drawablePadding="10dp"                    android:drawableTint="@color/black"
+                    android:text="0000000000"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/text_Estudios"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="@string/textEstudios"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/main_grisclaro"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/EstudiosPerfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="50dp"
+                    android:drawableStart="@drawable/ic_estudios"
+                    android:textAlignment="textStart"
+                    android:drawablePadding="10dp"                    android:drawableTint="@color/black"
+                    android:text="0000000000"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
 
         </FrameLayout>
+
     </FrameLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="118dp"
-        android:layout_height="113dp"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
         android:layout_gravity="center_vertical"
         android:background="@drawable/circlewhite_background"
-        android:layout_marginBottom="360dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cajaperfil"
+
+        app:layout_constraintBottom_toTopOf="@id/cajaperfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">
@@ -193,8 +278,8 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="108dp"
-            android:layout_height="95dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             android:layout_gravity="center"
             android:layout_marginStart="5dp"
             app:srcCompat="@drawable/ic_usericon"
@@ -202,6 +287,39 @@
 
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/Editar_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/transparent"
+        android:minHeight="48dp"
+        android:onClick="onClick"
+        android:text="@string/EditarPerfil"
+        android:textAllCaps="false"
+        android:textColor="@color/main_grisclaro"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/Cerrar_sesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/transparent"
+
+        android:minHeight="48dp"
+        android:onClick="onClick"
+        android:text="@string/CerrarSesionPerfil"
+        android:textAllCaps="false"
+        android:textColor="#F44336"
+        app:layout_constraintTop_toBottomOf="@+id/cajaperfil"
+        tools:ignore="TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="149dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

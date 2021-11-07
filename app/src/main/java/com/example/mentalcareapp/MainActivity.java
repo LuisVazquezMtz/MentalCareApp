@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                             finish();
                         }
                         else {
-                            Toast.makeText(MainActivity.this, "Correo y/o contraseña incorrecto", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "El Correo o contraseña no son correctos", Toast.LENGTH_SHORT).show();
 
                         }
                     }

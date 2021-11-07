@@ -228,6 +228,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if (task.isSuccessful()){
 
                     Map<String, Object> map = new HashMap<>();
+                    map.put("Tipo", "User");
                     map.put( "mail", Mail);
                     map.put( "password", Password);
                     map.put( "phone", Phone);
@@ -243,7 +244,7 @@ public class RegisterActivity extends AppCompatActivity {
                     String id = Auth.getCurrentUser().getUid();
                     idUsertemp = id;
 
-                    Database.child("Users").child("Pacientes").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    Database.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task2) {
                             if(task2.isSuccessful()){ }
@@ -253,7 +254,7 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                     });
 
-                    Database.child("Users").child("Pacientes").child(id).child("Personal Info").setValue(map2).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    Database.child("Users").child(id).child("Personal Info").setValue(map2).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task2) {
                             if(task2.isSuccessful()){
@@ -286,6 +287,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if (task.isSuccessful()){
 
                     Map<String, Object> map = new HashMap<>();
+                    map.put("Tipo", "Admin");
                     map.put( "mail", Mail);
                     map.put( "password", Password);
                     map.put( "phone", Phone);
@@ -308,7 +310,7 @@ public class RegisterActivity extends AppCompatActivity {
                     String id = Auth.getCurrentUser().getUid();
                     idUsertemp = id;
 
-                    Database.child("Users").child("Especial").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    Database.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task2) {
                             if(task2.isSuccessful()){ }
@@ -318,7 +320,7 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                     });
 
-                    Database.child("Users").child("Especial").child(id).child("Personal Info").setValue(map2).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    Database.child("Users").child(id).child("Personal Info").setValue(map2).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task2) {
                             if(task2.isSuccessful()){ }
@@ -328,7 +330,7 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                     });
 
-                    Database.child("Users").child("Especial").child(id).child("Professional Info").setValue(map3).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    Database.child("Users").child(id).child("Professional Info").setValue(map3).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task2) {
                             if(task2.isSuccessful()){
